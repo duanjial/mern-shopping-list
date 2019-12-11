@@ -11,7 +11,6 @@ import {
 } from 'reactstrap';
 import { connect } from 'react-redux';
 import { addItem } from '../actions/itemActions';
-import uuid from 'uuid';
 
 class ItemModal extends Component {
     state = {
@@ -32,7 +31,6 @@ class ItemModal extends Component {
     onSubmit = (e) => {
         e.preventDefault();
         const newItem = {
-            id: uuid(),
             name: this.state.name
         }
 
@@ -47,7 +45,7 @@ class ItemModal extends Component {
             <div>
                 <Button
                     color="dark"
-                    style={{ marginBotton: "2rem" }}
+                    style={{ marginBottom: "2rem" }}
                     onClick={this.toggle}
                 >Add Item</Button>
 
